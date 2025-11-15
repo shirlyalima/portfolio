@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirlya Lima | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="custom-cursor" id="customCursor"></div> 
+    
+    <header class="header">
+        <a href="#" class="logo">Shirlya Lima<span class="dot">.</span></a>
+        <nav class="navbar">
+            <a href="#home" class="active" data-i18n="nav-home">Home</a>
+            <a href="#projetos" data-i18n="nav-projetos">Projetos</a>
+            <a href="#sobre" data-i18n="nav-sobre">Sobre</a>
+            <a href="#contato" data-i18n="nav-contato">Contato</a>
+            
+            <button id="langToggle" class="btn-mode" data-current-lang="pt">EN</button>
+            <button id="darkModeToggle" class="btn-mode"><i class="fas fa-sun"></i></button>
+        </nav>
+    </header>
+
+    <section class="section home" id="home">
+        <div class="home-content reveal"> 
+            <p class="subtitle" data-i18n="home-subtitle">Olá, eu sou</p>
+            <h1>[Shirlya]</h1>
+            <h3 class="role-text" data-i18n="home-role-text" data-i18n-html>Desenvolvedora <span class="highlight">Web</span></h3>
+            <p class="description" data-i18n="home-description">
+                Criatividade e tecnologia.
+            </p>
+            <a href="#projetos" class="btn primary" data-i18n="btn-projects">Ver Projetos</a>
+            <a href="docs/Shirlya_Lima_CV.pdf" download="Shirlya_Lima_CV.pdf" class="btn secondary" data-i18n="btn-cv">Baixar CV</a>
+        </div>
+    </section>
+
+    <section class="section projetos" id="projetos">
+        <h2 class="heading reveal" data-i18n="heading-projetos">Projetos em Destaque</h2>
+        <div class="projetos-grid">
+            
+            <div class="projeto-card reveal" data-project-id="1">
+                <img src="./imgs/Destacador.png" alt="Projeto 1">
+                <div class="card-info">
+                    <h3 data-i18n="proj1-title">Destacador (Extensão Chrome)</h3>
+                    <p data-i18n="proj1-desc">Extensão que resolve uma limitação do atalho Ctrl + F, permitindo destacar múltiplos termos simultaneamente.</p>
+                    <span class="tag" data-i18n="proj1-tag-1">HTML</span>
+                    <span class="tag" data-i18n="proj1-tag-2">CSS</span>
+                    <span class="tag" data-i18n="proj1-tag-3">JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="projeto-card reveal" data-project-id="2">
+                <img src="./imgs/Athena.png" alt="Projeto 2">
+                <div class="card-info">
+                    <h3 data-i18n="proj2-title">Jogo - Athena</h3>
+                    <p data-i18n="proj2-desc">Projeto desenvolvido para explorar a criação de jogos 2D utilizando JavaScript.</p>
+                    <span class="tag" data-i18n="proj2-tag-1">HTML</span>
+                    <span class="tag" data-i18n="proj2-tag-2">CSS</span>
+                    <span class="tag" data-i18n="proj2-tag-3">JavaScript</span>
+                </div>
+            </div>
+
+             <div class="projeto-card reveal" data-project-id="3">
+                <img src="./imgs/Recomendador.png" alt="Projeto 3">
+                <div class="card-info">
+                    <h3 data-i18n="proj3-title">Recomendador de Livros</h3>
+                    <p data-i18n="proj3-desc">Site que recomenda livros, integrado com API e IA.</p>
+                    <span class="tag" data-i18n="proj3-tag-1">HTML</span>
+                    <span class="tag" data-i18n="proj3-tag-2">CSS</span>
+                    <span class="tag" data-i18n="proj3-tag-3">JavaScript</span>
+                </div>
+            </div>
+
+            <div class="projeto-card reveal" data-project-id="4">
+                <img src="./imgs/RPG-Educacao.png" alt="Projeto 4">
+                <div class="card-info">
+                    <h3 data-i18n="proj4-title">Site - RPG</h3>
+                    <p data-i18n="proj4-desc">Site responsivo. Um RPG criado para a sala de aula.</p>
+                    <span class="tag" data-i18n="proj4-tag-1">HTML</span>
+                    <span class="tag" data-i18n="proj4-tag-2">CSS</span>
+                </div>
+            </div>
+
+            <div class="projeto-card reveal" data-project-id="5">
+                <img src="./imgs/Aulas_1.png" alt="Projeto 5">
+                <div class="card-info">
+                    <h3 data-i18n="proj5-title">Site - Comercial</h3>
+                    <p data-i18n="proj5-desc">Site responsivo criado para divulgar aulas de inglês.</p>
+                    <span class="tag" data-i18n="proj5-tag-1">Python</span>
+                    <span class="tag" data-i18n="proj5-tag-2">Django</span>
+                </div>
+            </div>
+
+
+    
+
+
+
+
+
+
+
+
+            </div>
+    </section>
+
+   <section class="section sobre" id="sobre">
+    <h2 class="heading reveal" data-i18n="heading-sobre">Sobre Mim</h2>
+    
+    <div class="sobre-content">
+        <div class="sobre-texto reveal" data-i18n="heading-texto" data-i18n-html></div>
+        
+        <div class="sobre-imagem reveal">
+            <img src="./imgs/Shirlya.jpg" alt="Foto de Perfil de Shirlya Lima" class="perfil-img"> 
+        </div>
+    </div>
+</section>
+
+    <section class="section contato" id="contato">
+        <h2 class="heading reveal" data-i18n="heading-contato">Entre em Contato</h2>
+        
+        <div class="contato-botoes reveal">
+
+            <a href="https://www.linkedin.com/in/shirlya" target="_blank" class="btn contact-btn secondary">
+                <i class="fab fa-linkedin-in"></i> <span data-i18n="contact-btn-linkedin">LinkedIn</span>
+            </a>
+
+            <a href="mailto:shirlyalima.dev@gmail.com" target="_blank" class="btn contact-btn secondary">
+                <i class="fas fa-envelope"></i> <span data-i18n="contact-btn-email">Email</span>
+            </a>
+
+            <a href="https://github.com/shirlyalima" target="_blank" class="btn contact-btn secondary">
+                <i class="fab fa-github"></i> <span data-i18n="contact-btn-github">GitHub</span>
+            </a>
+
+            <a href="https://shirlyalima.itch.io" target="_blank" class="btn contact-btn secondary">
+                <i class="fab fa-itch-io"></i> <span data-i18n="contact-btn-itchio">Itch.io</span>
+            </a>
+
+        </div>
+        
+    </section>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title"></h3>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+/* ====================================================================== */
+/* 0. VARIÁVEIS CSS (Paleta de Cores e Tipografia) */
+/* ====================================================================== */
+:root {
+    /* Cores (Light Mode Base - Elegância Minimalista) */
+    --cor-fundo: #FFFFFF;
+    --cor-texto-principal: #1A1A1A;
+    --cor-secundaria: #6C757D;
+    --cor-borda: #E0E0E0;
+    
+    /* Cor de Destaque (O Toque Arrojado: Azul Elétrico) */
+    --cor-destaque: #0077FF;
+    --cor-destaque-hover: #0056B3;
+
+    /* Tipografia */
+    --fonte-principal: 'Arial', sans-serif;
+    --fonte-titulo: 'Roboto Mono', monospace;
+    
+    /* Espaçamento/Margem */
+    --padding-secao: 80px 10%;
+}
+
+/* Modo Escuro (Dark Mode - Sobrescrito) */
+.dark-mode {
+    --cor-fundo: #1A1A1A;
+    --cor-texto-principal: #F8F8F8;
+    --cor-secundaria: #A0A0A0;
+    --cor-borda: #333333;
+    --cor-destaque: #34A853; /* Verde Neon para contraste forte */
+    --cor-destaque-hover: #2B8742;
+}
+
+/* ====================================================================== */
+/* 1. RESET E ESTILOS GERAIS */
+/* ====================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    cursor: none; 
+}
+
+/*Garante que elementos de interação mantenham a mãozinha padrão do CSS */
+a, button, .projeto-card, .close-btn {
+    cursor: pointer !important;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-family: var(--fonte-titulo);
+}
+
+.section {
+    min-height: 100vh;
+    padding: var(--padding-secao);
+    
+}
+
+/* ====================================================================== */
+/* 2. NAVEGAÇÃO E LOGO */
+/* ====================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    z-index: 100;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.dark-mode .header {
+    background: rgba(26, 26, 26, 0.95);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-principal);
+}
+
+.logo .dot {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+}
+
+.navbar a {
+    font-size: 1rem;
+    margin-left: 35px;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--cor-destaque);
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--cor-destaque);
+    transition: width 0.3s ease-out;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
+/* ====================================================================== */
+/* 3. SEÇÃO HOME */
+/* ====================================================================== */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 150px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.home-content .subtitle {
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 5px;
+    font-family: var(--fonte-titulo);
+}
+
+.home-content .role-text {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.home-content .highlight {
+    color: var(--cor-destaque);
+}
+
+.home-content .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: var(--cor-secundaria);
+}
+
+/* Estilo dos Botões (Efeito Arrojado no Hover) */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn.primary {
+    background: var(--cor-destaque);
+    color: var(--cor-fundo);
+    border-color: var(--cor-destaque);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: var(--cor-texto-principal);
+    border-color: var(--cor-texto-principal);
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 119, 255, 0.3);
+}
+
+.btn.secondary:hover {
+    background: var(--cor-texto-principal);
+    color: var(--cor-fundo);
+    transform: translateY(-3px);
+}
+
+/* ====================================================================== */
+/* 4. SEÇÃO PROJETOS E MODAL */
+/* ====================================================================== */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projeto-card {
+    background: var(--cor-borda);
+    padding: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* cursor: pointer; (removido, agora usamos o cursor personalizado) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+}
+
+.dark-mode .projeto-card {
+    background: var(--cor-borda);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--cor-destaque);
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--cor-destaque);
+}
+
+.card-info .tag {
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: var(--cor-fundo);
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+/* Estilos do Modal (Pop-up) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    padding-top: 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--cor-fundo);
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-content {
+     transform: translateY(0);
+}
+
+.close-btn {
+    color: var(--cor-texto-principal);
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: var(--cor-destaque);
+}
+
+.tag-modal {
+    display: inline-block;
+    background: var(--cor-destaque);
+    color: var(--cor-fundo);
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* ====================================================================== */
+/* 5. Estilos de Animação - Scroll Reveal */
+/* ====================================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====================================================================== */
+/* 6. DARK MODE BUTTON E IDIOMA BUTTON */
+/* ====================================================================== */
+
+.btn-mode {
+    background: transparent;
+    border: none;
+    color: var(--cor-texto-principal);
+    font-size: 1.2rem;
+    /* cursor: pointer; (removido) */
+    margin-left: 15px;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.btn-mode:hover {
+    color: var(--cor-destaque);
+}
+
+/* ====================================================================== */
+/* 7. CURSOR PERSONALIZADO */
+/* ====================================================================== */
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--cor-destaque);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999; 
+    opacity: 0.8;
+    /* Transição suave para o movimento e o efeito de hover */
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.2s ease;
+    /* A transformação de movimento (transform) é gerenciada pelo JavaScript */
+}
+
+.custom-cursor.active {
+    width: 40px;
+    height: 40px;
+    opacity: 0.2;
+}
+
+/* ====================================================================== */
+/* 8. TIPOGRAFIA DA SECÇÃO SOBRE MIM */
+/* ====================================================================== */
+
+.sobre-texto p {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 400; 
+    font-size: 1.1em; 
+    line-height: 1.6;
+    margin-bottom: 1.5rem; 
+    color: var(--cor-texto-principal);
+    text-align: justify; 
+}
+
+/* ===================================================
+   Estilos para a Seção "Sobre Mim"
+   =================================================== */
+
+/* O contêiner principal para o layout lado a lado */
+.sobre-content {
+    display: flex; /* Habilita o Flexbox */
+    /* CORRIGIDO: Usa 'row' para seguir a ordem natural do HTML (Texto na Esquerda, Imagem na Direita) */
+    flex-direction: row; 
+    gap: 3rem; /* Espaçamento entre o texto e a imagem */
+    align-items: flex-start; /* Alinha o conteúdo ao topo do contêiner */
+    margin-top: 2rem; /* Adiciona um espaço da margem superior do texto */
+    flex-wrap: wrap; /* Permite que o conteúdo quebre linha em telas menores */
+}
+
+/* Estilo para o bloco de texto */
+.sobre-texto {
+    /* Ocupa a maior parte do espaço disponível (2/3) */
+    flex: 2; 
+    min-width: 300px; /* Garante que o texto tenha um tamanho mínimo */
+}
+
+/* Estilo para o contêiner da imagem */
+.sobre-imagem {
+    /* Ocupa a porção restante do espaço (1/3) */
+    flex: 1; 
+    max-width: 300px; /* Limita a largura máxima da imagem */
+    text-align: center; /* Centraliza a imagem se o contêiner for maior */
+    min-width: 200px; /* Garante que a imagem tenha um tamanho mínimo */
+}
+
+/* Estilo para a imagem em si - MANTENDO OS ESTILOS ORIGINAIS */
+.sobre-imagem .perfil-img {
+    width: 100%; 
+    height: auto;
+    /* Manter 'border-radius: 10px;' e 'box-shadow' para corresponder ao código CSS que me enviou */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Media Query para telas muito pequenas (Mobile) */
+@media (max-width: 768px) {
+    .sobre-content {
+        /* Usa 'column' para manter a ordem do HTML no mobile: Texto (Topo) e Imagem (Baixo) */
+        flex-direction: column; 
+        align-items: center; /* Centraliza ambos os itens */
+    }
+
+    .sobre-imagem, .sobre-texto {
+        max-width: 100%; 
+        min-width: unset;
+    }
+}
+
+
+/* ====================================================================== */
+/* 9. SEÇÃO CONTATO (Estilo dos Botões Sociais) */
+/* ====================================================================== */
+
+.contato-botoes {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebras de linha em telas pequenas */
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-btn {
+    /* Herda o estilo base do .btn, mas ajustamos o padding para ícones */
+    padding: 12px 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Evita que o texto quebre */
+}
+
+.contact-btn i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 1.1rem;
+}
+
+/* Garante que o Dark Mode inverta as cores secundárias para melhor legibilidade */
+.dark-mode .btn.secondary {
+    border-color: var(--cor-secundaria);
+    color: var(--cor-texto-principal);
+}
+
+.dark-mode .btn.secondary:hover {
+    background: var(--cor-destaque);
+    color: var(--cor-fundo);
+}
+
+/* Para telas muito pequenas, centraliza o texto de contato */
+@media (max-width: 600px) {
+    .contato-botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .contact-btn {
+        margin: 5px 0; /* Espaçamento vertical */
+        justify-content: center;
+    }
+}

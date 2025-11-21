@@ -107,8 +107,7 @@ const projectData = [
         description_en: 'A minimalist and responsive interface, with customizable colors and a focus on performance and user experience. The solution increases the productivity of those who deal with large volumes of text.',
         stack: ['JavaScript', 'HTML', 'CSS'],
         demoLink: 'https://chromewebstore.google.com/detail/destacador-de-palavras/nmefhbmcdilnmmidmnklfjjajppjnpin?hl=pt-BR&utm_source=ext_sidebar',
-        extraContent: '<img src="/imgs/Destacador.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">'
-    },
+        extraContent: '<img src="imgs/Destacador.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">'    },
     {
         id: '2',
         title: 'Jogo - Game',
@@ -116,7 +115,7 @@ const projectData = [
         description_en: 'An endless runner game with progression, where the main loop simulates the journey of the goddess Athena towards Mount Olympus. I created everything from conception, design, to full implementation of the game.',
         stack: ['JavaScript', 'HTML', 'CSS'],
         demoLink: 'https://shirlyalima.itch.io/athena',
-        extraContent: '<img src="/imgs/Athena.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">',
+        extraContent: '<img src="imgs/Athena.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">',
     },
 
     {
@@ -126,7 +125,7 @@ const projectData = [
         description_en: 'API integrated with AI to recommend books based on user preferences. User-friendly and responsive interface, focused on usability and user experience.',
         stack: ['JavaScript', 'HTML', 'CSS'],
         demoLink: 'https://shirlyalima.itch.io/athena',
-        extraContent: '<img src="/imgs/Recomendador.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">',
+        extraContent: '<img src="imgs/Recomendador.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">',
     },
 
     {
@@ -136,7 +135,7 @@ const projectData = [
         description_en: 'This landing page focuses on presenting an engaging narrative. The project was designed to be used by school students.',
         stack: ['JavaScript', 'HTML', 'CSS'],
         demoLink: 'https://shirlyalima.github.io/desvendando-os-segredos-da-escola/index.html',
-        extraContent: '<img src="/imgs/RPG-2.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">'
+        extraContent: '<img src="imgs/RPG-2.png" alt="Mockup do Projeto" style="width:70%; margin-bottom: 20px; border-radius: 8px;">'
     },
     
     {
@@ -279,8 +278,8 @@ const translations = {
 
         'proj5-title': 'Site - Comercial',
         'proj5-desc': 'Site responsivo criado para divulgar aulas de inglês.',
-        'proj5-tag-1': 'Python',
-        'proj5-tag-2': 'Django'
+        'proj5-tag-1': 'HTML',
+        'proj5-tag-2': 'CSS'
     },
     'en': {
         // NAV BAR
@@ -341,8 +340,8 @@ const translations = {
 
         'proj5-title': 'Commercial Site',
         'proj5-desc': 'Responsive website created to promote English classes.',
-        'proj5-tag-1': 'Python',
-        'proj5-tag-2': 'Django'
+        'proj5-tag-1': 'HTML',
+        'proj5-tag-2': 'CSS'
     }
 };
 

@@ -225,8 +225,8 @@ const translations = {
         "proj6-desc": "A responsive web experience created to present an RPG narrative in the classroom.",
 
         "extensions-eyebrow": "Catalog",
-        "extensions-title": "Explore all my extensions",
-        "extensions-description": "I gathered my Google Chrome tools on one page, organized as a small extension store.",
+         "extensions-title": "Explore all my games",
+        "extensions-description": "A collection of my game development projects.",
         "extensions-button": "Open catalog",
 
         "tech-eyebrow": "Stack",
@@ -235,7 +235,7 @@ const translations = {
 
         "about-eyebrow": "About me",
         "about-title": "Education, technology, and product development",
-        "about-text": "<p>My professional journey began in education, where I developed communication, planning, and user-understanding skills. Today, I apply this background to digital product development.</p><p>I work in Full Stack development, building interfaces, APIs, integrations, automations, and productivity tools. My main technologies include React, TypeScript, NestJS, PostgreSQL, n8n, and Chrome extensions.</p><p>I enjoy turning real problems into clear, functional, and intuitive solutions, following a project from the initial idea to the final user experience.</p>",
+        "about-text": "<p>My professional journey began in education, where I developed communication, planning, and user-understanding skills as a english teacher. Today, I apply this background to digital product development too.</p><p>I am graduated in Analysis and Development of Systems and I work in Full Stack development, building interfaces, APIs, integrations, automations, and productivity tools. My main technologies include React, TypeScript, NestJS, PostgreSQL, n8n, and Chrome extensions.</p><p>I enjoy turning real problems into clear, functional, and intuitive solutions, following a project from the initial idea to the final user experience.</p>",
         "about-github": "Explore my code on GitHub",
         "about-location": "Maceió, Alagoas · Brazil",
 

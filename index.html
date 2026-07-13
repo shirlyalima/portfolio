@@ -4,158 +4,447 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Shirlya Lima">
-    <title>Shirlya Lima | Portfólio</title>
-    <base href="/portfolio/">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <meta name="description" content="Portfólio de Shirlya Lima, desenvolvedora Full Stack especializada em aplicações web, automações, APIs e extensões Chrome.">
+    <title>Shirlya Lima | Full Stack Developer</title>
 
-    <div class="custom-cursor" id="customCursor"></div> 
-    
+        <base href="/portfolio/">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+
     <header class="header">
-        <a href="#" class="logo">Shirlya Lima<span class="dot">.</span></a>
-        <nav class="navbar">
+        <a href="#home" class="logo" aria-label="Ir para o início">
+            Porfólio<span class="dot">.</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar" id="navbar">
             <a href="#home" class="active" data-i18n="nav-home">Home</a>
-            <a href="#projetos" data-i18n="nav-projetos">Projetos</a>
-            <a href="#sobre" data-i18n="nav-sobre">Sobre</a>
-            <a href="#contato" data-i18n="nav-contato">Contato</a>
-            
-            <button id="langToggle" class="btn-mode" data-current-lang="pt">EN</button>
-            <button id="darkModeToggle" class="btn-mode"><i class="fas fa-sun"></i></button>
+            <!-- <a href="#especialidades" data-i18n="nav-specialties">Especialidades</a> -->
+            <a href="#projetos" data-i18n="nav-projects">Projetos</a>
+            <a href="#tecnologias" data-i18n="nav-tech">Tecnologias</a>
+            <a href="#sobre" data-i18n="nav-about">Sobre</a>
+            <a href="#contato" data-i18n="nav-contact">Contato</a>
+
+            <div class="nav-actions">
+                <button id="langToggle" class="btn-mode" data-current-lang="pt" aria-label="Alterar idioma">EN</button>
+                <button id="darkModeToggle" class="btn-mode" aria-label="Alternar tema">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <section class="section home" id="home">
-        <div class="home-content reveal"> 
-            <p class="subtitle" data-i18n="home-subtitle">Olá, eu sou</p>
-            <h1>[Shirlya]</h1>
-            <h3 class="role-text" data-i18n="home-role-text" data-i18n-html>Desenvolvedora <span class="highlight">Web</span></h3>
-            <p class="description" data-i18n="home-description">
-            </p>
-            <a href="#projetos" class="btn primary" data-i18n="btn-projects">Ver Projetos</a>
-            <a href="docs/Shirlya_Lima_CV.pdf" download="Shirlya_Lima_CV.pdf" class="btn secondary" data-i18n="btn-cv">Baixar CV</a>
-        </div>
-    </section>
+    <main>
+        <section class="section home" id="home">
+            <div class="home-background" aria-hidden="true"></div>
 
-    <section class="section projetos" id="projetos">
-        <h2 class="heading reveal" data-i18n="heading-projetos">Projetos em Destaque</h2>
-        <div class="projetos-grid">
-            
-            <div class="projeto-card reveal" data-project-id="1">
-                <img src="./imgs/Destacador.png" alt="Projeto 1">
-                <div class="card-info">
-                    <h3 data-i18n="proj1-title">Destacador (Extensão Chrome)</h3>
-                    <p data-i18n="proj1-desc">Extensão que resolve uma limitação do atalho Ctrl + F, permitindo destacar múltiplos termos simultaneamente.</p>
-                    <span class="tag" data-i18n="proj1-tag-1">HTML</span>
-                    <span class="tag" data-i18n="proj1-tag-2">CSS</span>
-                    <span class="tag" data-i18n="proj1-tag-3">JavaScript</span>
-                </div>
-            </div>
-            
-            <div class="projeto-card reveal" data-project-id="2">
-                <img src="./imgs/Athena.png" alt="Projeto 2">
-                <div class="card-info">
-                    <h3 data-i18n="proj2-title">Jogo - Athena</h3>
-                    <p data-i18n="proj2-desc">Projeto desenvolvido para explorar a criação de jogos 2D utilizando JavaScript.</p>
-                    <span class="tag" data-i18n="proj2-tag-1">HTML</span>
-                    <span class="tag" data-i18n="proj2-tag-2">CSS</span>
-                    <span class="tag" data-i18n="proj2-tag-3">JavaScript</span>
-                </div>
-            </div>
+            <div class="home-content reveal">
+                <p class="eyebrow" data-i18n="home-eyebrow">Olá, eu sou</p>
 
-             <div class="projeto-card reveal" data-project-id="3">
-                <img src="./imgs/Recomendador.png" alt="Projeto 3">
-                <div class="card-info">
-                    <h3 data-i18n="proj3-title">Recomendador de Livros</h3>
-                    <p data-i18n="proj3-desc">Site que recomenda livros, integrado com API e IA.</p>
-                    <span class="tag" data-i18n="proj3-tag-1">HTML</span>
-                    <span class="tag" data-i18n="proj3-tag-2">CSS</span>
-                    <span class="tag" data-i18n="proj3-tag-3">JavaScript</span>
+                <h1>[Shirlya]<span class="dot"></span></h1>
+
+                <h2 class="role-text" data-i18n="home-role" data-i18n-html>
+                    Desenvolvedora <span class="highlight">Full Stack</span>
+                </h2>
+
+                <p class="description" data-i18n="home-description">
+                    Desenvolvo aplicações web, APIs, automações com IA e extensões para Google Chrome, combinando tecnologia, criatividade e foco em problemas reais.
+                </p>
+
+                <!-- <div class="hero-tags" aria-label="Principais tecnologias">
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>NestJS</span>
+                    <span>PostgreSQL</span>
+                    <span>n8n</span>
+                    <span>Chrome Extensions</span>
+                </div> -->
+
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn primary">
+                        <span data-i18n="btn-projects">Ver projetos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="https://shirlyalima.github.io/extensions/" target="_blank" rel="noopener noreferrer" class="btn secondary">
+                        <i class="fab fa-chrome"></i>
+                        <span data-i18n="btn-extensions">Minhas extensões</span>
+                    </a>
+
+                    <a href="docs/Shirlya_Lima_CV.pdf" download="Shirlya_Lima_CV.pdf" class="btn text-btn">
+                        <i class="fas fa-download"></i>
+                        <span data-i18n="btn-cv">Baixar CV</span>
+                    </a>
                 </div>
             </div>
 
-            <div class="projeto-card reveal" data-project-id="4">
-                <img src="./imgs/RPG-Educacao.png" alt="Projeto 4">
-                <div class="card-info">
-                    <h3 data-i18n="proj4-title">Site - RPG</h3>
-                    <p data-i18n="proj4-desc">Site responsivo. Um RPG criado para a sala de aula.</p>
-                    <span class="tag" data-i18n="proj4-tag-1">HTML</span>
-                    <span class="tag" data-i18n="proj4-tag-2">CSS</span>
-                </div>
+            <aside class="hero-card reveal" aria-label="Resumo profissional">
+                <!-- <p class="hero-card-label" data-i18n="hero-card-label">Foco atual</p> -->
+                <h3 data-i18n="hero-card-title">Produtos digitais completos</h3>
+
+                <ul>
+                    <li><i class="fas fa-check"></i><span data-i18n="hero-item-1">Frontend moderno e responsivo</span></li>
+                    <li><i class="fas fa-check"></i><span data-i18n="hero-item-2">Backend, autenticação e banco de dados</span></li>
+                    <li><i class="fas fa-check"></i><span data-i18n="hero-item-3">Integrações, APIs REST e automações</span></li>
+                    <li><i class="fas fa-check"></i><span data-i18n="hero-item-4">Extensões e ferramentas de produtividade</span></li>
+                </ul>
+            </aside>
+        </section>
+
+        <!-- <section class="section specialties" id="especialidades">
+            <div class="section-heading reveal">
+                <p class="eyebrow" data-i18n="specialties-eyebrow">O que eu desenvolvo</p>
+                <h2 data-i18n="specialties-title">Soluções que unem produto, código e experiência</h2>
+                <p data-i18n="specialties-description">
+                    Atuo em diferentes etapas do desenvolvimento, da interface à integração com serviços externos.
+                </p>
             </div>
 
-            <div class="projeto-card reveal" data-project-id="5">
-                <img src="./imgs/Aulas_1.png" alt="Projeto 5">
-                <div class="card-info">
-                    <h3 data-i18n="proj5-title">Site - Comercial</h3>
-                    <p data-i18n="proj5-desc">Site responsivo criado para divulgar aulas de inglês.</p>
-                    <span class="tag" data-i18n="proj5-tag-1">HTML</span>
-                    <span class="tag" data-i18n="proj5-tag-2">CSS</span>
-                </div>
+            <div class="specialties-grid">
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-window-maximize"></i></div>
+                    <h3 data-i18n="specialty-1-title">Aplicações Web</h3>
+                    <p data-i18n="specialty-1-desc">Interfaces responsivas e sistemas modernos com React, TypeScript e foco em usabilidade.</p>
+                </article>
+
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-server"></i></div>
+                    <h3 data-i18n="specialty-2-title">Backend e APIs</h3>
+                    <p data-i18n="specialty-2-desc">APIs REST, autenticação JWT/OAuth, regras de negócio e persistência com PostgreSQL.</p>
+                </article>
+
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3 data-i18n="specialty-3-title">IA e Automação</h3>
+                    <p data-i18n="specialty-3-desc">Fluxos com n8n, integrações entre sistemas e recursos de IA aplicados a tarefas reais.</p>
+                </article>
+
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3 data-i18n="specialty-4-title">Extensões Chrome</h3>
+                    <p data-i18n="specialty-4-desc">Ferramentas para produtividade, recrutamento e análise de conteúdo no navegador.</p>
+                </article>
+            </div>
+        </section> -->
+
+        <section class="section projetos" id="projetos">
+            <div class="section-heading reveal">
+                <p class="eyebrow" data-i18n="projects-eyebrow">Portflio</p>
+                <h2 data-i18n="projects-title">Projetos em destaque</h2>
+                <p data-i18n="projects-description">
+                    Uma seleção de produtos, ferramentas e experiências digitais que desenvolvi.
+                </p>
             </div>
 
-            <div class="projeto-card reveal" data-project-id="6">
-                <img src="./imgs/Atmosphere1.png" alt="Projeto 6">
-                <div class="card-info">
-                    <h3 data-i18n="proj6-title">Jogo - Atmosphere</h3>
-                    <p data-i18n="proj6-desc">Jogo da memória com tema espacial, desenvolvido para aprimorar habilidades em JavaScript.</p>
-                    <span class="tag" data-i18n="proj6-tag-1">HTML</span>
-                    <span class="tag" data-i18n="proj6-tag-2">CSS</span>
-                    <span class="tag" data-i18n="proj6-tag-3">JavaScript</span>
-                </div>
-
-
-
+            <div class="project-filters reveal" role="group" aria-label="Filtrar projetos">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Todos</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="extension" data-i18n="filter-extensions">Extensões</button>
+                <button class="filter-btn" data-filter="ai" data-i18n="filter-ai">IA e automação</button>
+                <button class="filter-btn" data-filter="games" data-i18n="filter-games">Jogos</button>
+                <button class="filter-btn" data-filter="education" data-i18n="filter-education">Educação</button>
             </div>
-    </section>
 
-   <section class="section sobre" id="sobre">
-    <h2 class="heading reveal" data-i18n="heading-sobre">Sobre Mim</h2>
-    
-    <div class="sobre-content">
-        <div class="sobre-texto reveal" data-i18n="heading-texto" data-i18n-html></div>
+            <div class="projetos-grid">
+                <article class="projeto-card reveal featured-project" data-project-id="1" data-category="fullstack ai">
+    <div class="project-image-wrapper">
+        <img src="imgs/1.png" alt="Projeto interno de Employee Experience" loading="lazy">
         
-        <div class="sobre-imagem reveal">
-            <img src="./imgs/Shirlya.jpg" alt="Foto de Perfil de Shirlya Lima" class="perfil-img"> 
-        </div>
+        <span class="project-badge" data-i18n="project-featured">Projeto Interno</span>
     </div>
-</section>
 
-    <section class="section contato" id="contato">
-        <h2 class="heading reveal" data-i18n="heading-contato">Entre em Contato</h2>
-        
-        <div class="contato-botoes reveal">
-
-            <a href="https://www.linkedin.com/in/shirlya" target="_blank" class="btn contact-btn secondary">
-                <i class="fab fa-linkedin-in"></i> <span data-i18n="contact-btn-linkedin">LinkedIn</span>
-            </a>
-
-            <a href="mailto:shirlyalima.dev@gmail.com" target="_blank" class="btn contact-btn secondary">
-                <i class="fas fa-envelope"></i> <span data-i18n="contact-btn-email">Email</span>
-            </a>
-
-            <a href="https://github.com/shirlyalima" target="_blank" class="btn contact-btn secondary">
-                <i class="fab fa-github"></i> <span data-i18n="contact-btn-github">GitHub</span>
-            </a>
-
-            <a href="https://shirlyalima.itch.io" target="_blank" class="btn contact-btn secondary">
-                <i class="fab fa-itch-io"></i> <span data-i18n="contact-btn-itchio">Itch.io</span>
-            </a>
-
+    <div class="card-info">
+        <p class="project-type">Full Stack · Internal Project</p>
+        <h3>Employee Experience Journey</h3>
+        <p data-i18n="proj1-desc">
+            Plataforma gamificada de Employee Experience desenvolvida para uso interno, com foco em autenticação, dashboards, campanhas, trilhas de aprendizagem, relatórios e automações.
+        </p>
+        <div class="tags">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>NestJS</span>
+            <span>PostgreSQL</span>
         </div>
-        
-    </section>
+        <div class="private-notice">
+    <i class="fas fa-lock"></i>
+    <span>
+        Este é um projeto interno. Algumas imagens e informações foram omitidas por questões de confidencialidade.
+    </span>
+</div>
 
-    <div id="project-modal" class="modal">
+        <button class="project-link" type="button">
+            <span data-i18n="project-details">Ver detalhes</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</article>
+
+                <article class="projeto-card reveal" data-project-id="2" data-category="extension">
+                    <div class="project-image-wrapper">
+                        <img src="imgs/HuntingTracker.png" alt="Interface da extensão Hunting Tracker" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <p class="project-type">Chrome Extension · Recruitment</p>
+                        <h3>Hunting Tracker</h3>
+                        <p data-i18n="proj2-desc">Extensão que mensura e organiza o tempo investido em atividades de Direct Sourcing.</p>
+                        <div class="tags">
+                            <span>JavaScript</span><span>Manifest V3</span><span>Chrome API</span>
+                        </div>
+                        <button class="project-link" type="button">
+                            <span data-i18n="project-details">Ver detalhes</span><i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="projeto-card reveal" data-project-id="3" data-category="fullstack ai">
+                    <div class="project-image-wrapper">
+                        <img src="imgs/Recomendador.png" alt="Interface do Recomendador de Livros" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <p class="project-type">Web App · AI</p>
+                        <h3 data-i18n="proj3-title">Recomendador de Livros</h3>
+                        <p data-i18n="proj3-desc">Aplicação que combina dados da OpenLibrary e IA para sugerir leituras personalizadas.</p>
+                        <div class="tags">
+                            <span>JavaScript</span><span>REST API</span><span>OpenAI</span>
+                        </div>
+                        <button class="project-link" type="button">
+                            <span data-i18n="project-details">Ver detalhes</span><i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="projeto-card reveal" data-project-id="4" data-category="extension">
+                    <div class="project-image-wrapper">
+                        <img src="imgs/Destacador.png" alt="Interface do Destacador de Palavras-chave" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <p class="project-type">Chrome Extension · Productivity</p>
+                        <h3 data-i18n="proj4-title">Destacador de Palavras-chave</h3>
+                        <p data-i18n="proj4-desc">Permite localizar e destacar diversos termos simultaneamente em páginas da web.</p>
+                        <div class="tags">
+                            <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                        </div>
+                        <button class="project-link" type="button">
+                            <span data-i18n="project-details">Ver detalhes</span><i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="projeto-card reveal" data-project-id="5" data-category="games">
+                    <div class="project-image-wrapper">
+                        <img src="imgs/Athena.png" alt="Jogo 2D Athena" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <p class="project-type">2D Game · JavaScript</p>
+                        <h3>Athena</h3>
+                        <p data-i18n="proj5-desc">Endless runner inspirado na mitologia grega, com lógica, física, colisões e arte autoral.</p>
+                        <div class="tags">
+                            <span>Canvas</span><span>JavaScript</span><span>Game Design</span>
+                        </div>
+                        <button class="project-link" type="button">
+                            <span data-i18n="project-details">Ver detalhes</span><i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="projeto-card reveal" data-project-id="6" data-category="education">
+                    <div class="project-image-wrapper">
+                        <img src="imgs/RPG-Educacao.png" alt="Site educacional de RPG" loading="lazy">
+                    </div>
+                    <div class="card-info">
+                        <p class="project-type">Web · Education</p>
+                        <h3 data-i18n="proj6-title">RPG Educacional</h3>
+                        <p data-i18n="proj6-desc">Experiência web responsiva criada para apresentar uma narrativa de RPG em sala de aula.</p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>UX</span>
+                        </div>
+                        <button class="project-link" type="button">
+                            <span data-i18n="project-details">Ver detalhes</span><i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="extensions-cta reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="extensions-eyebrow">Catálogo</p>
+                    <h3 data-i18n="extensions-title">Conheça todos os meus jogos</h3>
+                    <p data-i18n="extensions-description">Explore meu catálogo de jogos desenvolvidos.</p>
+                </div>
+
+                <!-- <a href="https://shirlyalima.github.io/extensions/" target="_blank" rel="noopener noreferrer" class="btn primary">
+                    <i class="fab fa-chrome"></i>
+                    <span data-i18n="extensions-button">Página de Extensões</span>
+                </a> -->
+
+                <a href="https://shirlyalima.itch.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary">
+                <i class="fab fa-itch-io"></i>
+                <span data-i18n="games-button">Página de jogos</span>
+            </a>
+            </div>
+            
+
+            
+    
+
+    
+</div>
+        </section>
+
+        <section class="section tecnologias" id="tecnologias">
+            <div class="section-heading reveal">
+                <p class="eyebrow" data-i18n="tech-eyebrow">Stack</p>
+                <h2 data-i18n="tech-title">Tecnologias e ferramentas</h2>
+                <p data-i18n="tech-description">Tecnologias que utilizo para desenvolver, integrar e publicar soluções digitais.</p>
+            </div>
+
+            <div class="tech-grid reveal">
+                <div class="tech-item"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="tech-item"><i class="fab fa-js"></i><span>TypeScript</span></div>
+                <div class="tech-item"><i class="fab fa-node-js"></i><span>NestJS</span></div>
+                <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
+                <div class="tech-item"><i class="fas fa-code-branch"></i><span>REST APIs</span></div>
+                <div class="tech-item"><i class="fas fa-diagram-project"></i><span>n8n</span></div>
+                <div class="tech-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                <div class="tech-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                <div class="tech-item"><i class="fab fa-chrome"></i><span>Manifest V3</span></div>
+                <div class="tech-item"><i class="fas fa-shield-halved"></i><span>JWT / OAuth</span></div>
+                <div class="tech-item"><i class="fas fa-file-pdf"></i><span>PDF / Excel</span></div>
+                <div class="tech-item"><i class="fas fa-brain"></i><span>AI Integration</span></div>
+            </div>
+
+       <div class="tech-grid reveal" style="margin-bottom: 6rem;"></div>
+            <div class="section-heading reveal">
+                <p class="eyebrow" data-i18n="specialties-eyebrow">O que eu desenvolvo</p>
+                <h2 data-i18n="specialties-title">Soluções que unem produto, código e experiência</h2>
+                <p data-i18n="specialties-description">
+                    Atuo em diferentes etapas do desenvolvimento, da interface à integração com serviços externos.
+                </p>
+            </div>
+
+            <div class="specialties-grid">
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-window-maximize"></i></div>
+                    <h3 data-i18n="specialty-1-title">Aplicações Web</h3>
+                    <p data-i18n="specialty-1-desc">Interfaces responsivas e sistemas modernos com React, TypeScript e foco em usabilidade.</p>
+                </article>
+
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-server"></i></div>
+                    <h3 data-i18n="specialty-2-title">Backend e APIs</h3>
+                    <p data-i18n="specialty-2-desc">APIs REST, autenticação JWT/OAuth, regras de negócio e persistência com PostgreSQL.</p>
+                </article>
+
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                    <h3 data-i18n="specialty-3-title">IA e Automação</h3>
+                    <p data-i18n="specialty-3-desc">Fluxos com n8n, integrações entre sistemas e recursos de IA aplicados a tarefas reais.</p>
+                </article>
+
+                <article class="specialty-card reveal">
+                    <div class="specialty-icon"><i class="fas fa-puzzle-piece"></i></div>
+                    <h3 data-i18n="specialty-4-title">Extensões Chrome</h3>
+                    <p data-i18n="specialty-4-desc">Ferramentas para produtividade, recrutamento e análise de conteúdo no navegador.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section sobre" id="sobre">
+            <div class="sobre-content">
+                <div class="sobre-texto reveal">
+                    <p class="eyebrow" data-i18n="about-eyebrow">Sobre mim</p>
+                    <h2 data-i18n="about-title">Educação, tecnologia e desenvolvimento de produtos</h2>
+
+                    <div data-i18n="about-text" data-i18n-html>
+                        <p>Minha trajetória profissional começou na educação, onde desenvolvi habilidades de comunicação, planejamento e compreensão das necessidades das pessoas enquanto professora de Inglês. Hoje, aplico essa experiência também ao desenvolvimento de produtos digitais.</p>
+                        <p>Sou formada em Análise e Desenvolvimento de Sistemas e atuo com desenvolvimento Full Stack, criando interfaces, APIs, integrações, automações e ferramentas de produtividade. Trabalho principalmente com React, TypeScript, NestJS, PostgreSQL, n8n e extensões Chrome.</p>
+                        <p>Gosto de transformar problemas reais em soluções claras, funcionais e intuitivas, acompanhando o projeto desde a ideia até a experiência final do usuário.</p>
+                    </div>
+
+                    <a href="https://github.com/shirlyalima" target="_blank" rel="noopener noreferrer" class="inline-link">
+                        <span data-i18n="about-github">Conheça meu código no GitHub</span>
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <div class="sobre-imagem reveal">
+                    <div class="photo-frame">
+                        <img src="imgs/shirlyalima.png" alt="Foto de Shirlya Lima" class="perfil-img" loading="lazy">
+                    </div>
+
+                    <div class="about-note">
+                        <i class="fas fa-location-dot"></i>
+                        <span data-i18n="about-location">Maceió, Alagoas · Brasil</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contato" id="contato">
+            <div class="contact-box reveal">
+                <div>
+                    <p class="eyebrow" data-i18n="contact-eyebrow">Vamos conversar</p>
+                    <h2 data-i18n="contact-title">Tem um projeto ou oportunidade?</h2>
+                    <p data-i18n="contact-description">Entre em contato para conversar sobre desenvolvimento web, automações, APIs e produtos digitais.</p>
+                </div>
+
+                <div class="contato-botoes">
+                    <a href="mailto:shirlyalima.dev@gmail.com" class="btn primary contact-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span data-i18n="contact-email">Enviar email</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/shirlya" target="_blank" rel="noopener noreferrer" class="btn secondary contact-btn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/shirlyalima" target="_blank" rel="noopener noreferrer" class="btn secondary contact-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+
+                    <!-- <a href="https://shirlyalima.github.io/extensions/" target="_blank" rel="noopener noreferrer" class="btn secondary contact-btn">
+                        <i class="fab fa-chrome"></i>
+                        <span data-i18n="contact-extensions">Extensões</span>
+                    </a>
+
+                    <a href="https://shirlyalima.itch.io" target="_blank" rel="noopener noreferrer" class="btn secondary contact-btn">
+                        <i class="fab fa-itch-io"></i>
+                        <span>Itch.io</span>
+                    </a> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="currentYear"></span> Shirlya Lima. <span data-i18n="footer-text">Desenvolvido com HTML, CSS e JavaScript.</span></p>
+    </footer>
+
+    <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
-            <span class="close-btn">&times;</span>
+            <button class="close-btn" type="button" aria-label="Fechar modal">&times;</button>
+            <p id="modal-type" class="project-type"></p>
             <h3 id="modal-title"></h3>
             <div id="modal-details"></div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
-
 </html>

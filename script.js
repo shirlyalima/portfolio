@@ -134,10 +134,10 @@ const translations = {
 
         "proj1-desc": "Plataforma gamificada com autenticação, dashboards, campanhas, cursos, recompensas e relatórios.",
         "proj2-desc": "Extensão que mensura e organiza o tempo investido em atividades de Direct Sourcing.",
-        "proj3-title": "Recomendador de Livros",
-        "proj3-desc": "Destacador de Palavras-chave",
-        "proj4-title": "Aplicação que combina dados da OpenLibrary e IA para sugerir leituras personalizadas.",
-        "proj4-desc": "Permite localizar e destacar diversos termos simultaneamente em páginas da web.",
+        "proj3-title": "Destacador de Palavras-chave",
+        "proj3-desc": "Permite localizar e destacar diversos termos simultaneamente em páginas da web.",
+        "proj4-title": "Recomendador de Livros",
+        "proj4-desc": "Aplicação que combina dados da OpenLibrary e IA para sugerir leituras personalizadas.",
         "proj5-desc": "Endless runner inspirado na mitologia grega, com lógica, física, colisões e arte autoral.",
         "proj6-title": "RPG Educacional",
         "proj6-desc": "Experiência web responsiva criada para apresentar uma narrativa de RPG em sala de aula.",
@@ -155,7 +155,7 @@ const translations = {
 
         "about-eyebrow": "Sobre mim",
         "about-title": "Educação, tecnologia e desenvolvimento de produtos",
-        "about-text": "<p>Minha trajetória profissional começou na educação, onde desenvolvi habilidades de comunicação,planejamento e compreensão das necessidades das pessoas enquanto professora de Inglês. Hoje, aplico essa experiência também ao desenvolvimento de produtos digitais.</p><p>Sou formada em Análise e Desenvolvimento de Sistemas e atuo com desenvolvimento Full Stack, criando interfaces, APIs, integrações, automações e ferramentas de produtividade. Trabalho principalmente com React, TypeScript, NestJS, PostgreSQL, n8n e extensões Chrome.</p><p>Gosto de transformar problemas reais em soluções claras, funcionais e intuitivas, acompanhando o projeto desde a ideia até a experiência final do usuário.</p>",
+        "about-text": "<p>Minha trajetória profissional começou na educação, onde desenvolvi habilidades de comunicação, planejamento e compreensão das necessidades das pessoas enquanto professora de Inglês. Hoje, aplico essa experiência também ao desenvolvimento de produtos digitais.</p><p>Sou formada em Análise e Desenvolvimento de Sistemas e atuo com desenvolvimento Full Stack, criando interfaces, APIs, integrações, automações e ferramentas de produtividade. Trabalho principalmente com React, TypeScript, NestJS, PostgreSQL, n8n e extensões Chrome.</p><p>Gosto de transformar problemas reais em soluções claras, funcionais e intuitivas, acompanhando o projeto desde a ideia até a experiência final do usuário.</p>",
         "about-github": "Conheça meu código no GitHub",
         "about-location": "Maceió, Alagoas · Brasil",
 
@@ -238,7 +238,7 @@ const translations = {
 
         "about-eyebrow": "About me",
         "about-title": "Education, technology, and product development",
-        "about-text": "<p>My professional journey began in education, where I developed communication, planning, and user-understanding skills as a english teacher. Today, I apply this background to digital product development too.</p><p>I am graduated in Analysis and Development of Systems and I work in Full Stack development, building interfaces, APIs, integrations, automations, and productivity tools. My main technologies include React, TypeScript, NestJS, PostgreSQL, n8n, and Chrome extensions.</p><p>I enjoy turning real problems into clear, functional, and intuitive solutions, following a project from the initial idea to the final user experience.</p>",
+        "about-text": "<p>My professional journey began in education, where I developed communication, planning, and user-understanding skills as an english teacher. Today, I apply this background to digital product development too.</p><p>I am graduated in Analysis and Development of Systems and I work in Full Stack development, building interfaces, APIs, integrations, automations, and productivity tools. My main technologies include React, TypeScript, NestJS, PostgreSQL, n8n, and Chrome extensions.</p><p>I enjoy turning real problems into clear, functional, and intuitive solutions, following a project from the initial idea to the final user experience.</p>",
         "about-github": "Explore my code on GitHub",
         "about-location": "Maceió, Alagoas · Brazil",
 

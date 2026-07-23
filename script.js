@@ -29,19 +29,6 @@ const projectData = [
     },
     {
         id: "3",
-        type: "Web App · AI",
-        title_pt: "Recomendador de Livros",
-        title_en: "Book Recommender",
-        description_pt: "Aplicação que integra a OpenLibrary e recursos de IA para gerar recomendações de leitura personalizadas. O projeto combina consumo de APIs REST, interpretação das preferências do usuário e uma interface responsiva.",
-        description_en: "An application that integrates OpenLibrary and AI resources to generate personalized reading recommendations. It combines REST API consumption, interpretation of user preferences, and a responsive interface.",
-        stack: ["JavaScript", "REST API", "OpenLibrary", "OpenAI", "Responsive Design"],
-        image: "imgs/Recomendador.png",
-        demoLink: "https://recomendador-livros-ia.vercel.app/",
-        repositoryLink: "",
-        private: false
-    },
-    {
-        id: "4",
         type: "Chrome Extension · Productivity",
         title_pt: "Destacador de Palavras-chave",
         title_en: "Keyword Highlighter",
@@ -53,6 +40,21 @@ const projectData = [
         repositoryLink: "",
         private: false
     },
+
+   {
+      id: "4",
+       type: "Web App · AI",
+        title_pt: "Recomendador de Livros",
+        title_en: "Book Recommender",
+        description_pt: "Aplicação que integra a OpenLibrary e recursos de IA para gerar recomendações de leitura personalizadas. O projeto combina consumo de APIs REST, interpretação das preferências do usuário e uma interface responsiva.",
+        description_en: "An application that integrates OpenLibrary and AI resources to generate personalized reading recommendations. It combines REST API consumption, interpretation of user preferences, and a responsive interface.",
+        stack: ["JavaScript", "REST API", "OpenLibrary", "OpenAI", "Responsive Design"],
+        image: "imgs/Recomendador.png",
+        demoLink: "https://recomendador-livros-ia.vercel.app/",
+        repositoryLink: "",
+        private: false
+   },
+   
     {
         id: "5",
         type: "2D Game · JavaScript",
@@ -133,8 +135,8 @@ const translations = {
         "proj1-desc": "Plataforma gamificada com autenticação, dashboards, campanhas, cursos, recompensas e relatórios.",
         "proj2-desc": "Extensão que mensura e organiza o tempo investido em atividades de Direct Sourcing.",
         "proj3-title": "Recomendador de Livros",
-        "proj3-desc": "Aplicação que combina dados da OpenLibrary e IA para sugerir leituras personalizadas.",
-        "proj4-title": "Destacador de Palavras-chave",
+        "proj3-desc": "Destacador de Palavras-chave",
+        "proj4-title": "Aplicação que combina dados da OpenLibrary e IA para sugerir leituras personalizadas.",
         "proj4-desc": "Permite localizar e destacar diversos termos simultaneamente em páginas da web.",
         "proj5-desc": "Endless runner inspirado na mitologia grega, com lógica, física, colisões e arte autoral.",
         "proj6-title": "RPG Educacional",
@@ -143,6 +145,7 @@ const translations = {
         "extensions-eyebrow": "Catálogo",
         "extensions-title": "Conheça todos os meus jogos",
         "extensions-description": "Explore meu catálogo de jogos desenvolvidos.",
+       
         // "extensions-button": "Página de Extensões",
         "games-button": "Página de jogos",
 
@@ -216,10 +219,10 @@ const translations = {
 
         "proj1-desc": "A gamified platform featuring authentication, dashboards, campaigns, courses, rewards, and reports.",
         "proj2-desc": "An extension that measures and organizes the time invested in Direct Sourcing activities.",
-        "proj3-title": "Book Recommender",
-        "proj3-desc": "An application combining OpenLibrary data and AI to suggest personalized reads.",
-        "proj4-title": "Keyword Highlighter",
-        "proj4-desc": "Finds and highlights multiple terms simultaneously across web pages.",
+        "proj3-title": "Keyword Highlighter",
+        "proj3-desc": "Finds and highlights multiple terms simultaneously across web pages.",
+        "proj4-title": "Book Recommender",
+        "proj4-desc": "An application combining OpenLibrary data and AI to suggest personalized reads.",
         "proj5-desc": "A Greek mythology-inspired endless runner featuring logic, physics, collision, and original art.",
         "proj6-title": "Educational RPG",
         "proj6-desc": "A responsive web experience created to present an RPG narrative in the classroom.",

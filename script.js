@@ -83,7 +83,7 @@ const projectData = [
     },
     {
         id: "7",
-        type: "Web · Education",
+        type: "Web · Frontend",
         title_pt: "Aulas de Inglês",
         title_en: "English Classes Platform",
         description_pt: "Website criado para disponibilizar materiais pedagógicos, recursos interativos e conteúdos de apoio para aulas de inglês. Desenvolvido para facilitar o acesso de estudantes a exercícios, textos e orientações de estudos de forma clara e intuitiva.",
@@ -96,7 +96,7 @@ const projectData = [
     },
     {
         id: "8",
-        type: "Web · Education",
+        type: "Web · Frontend",
         title_pt: "RPG Educacional",
         title_en: "Educational RPG",
         description_pt: "Landing page responsiva criada para apoiar uma experiência pedagógica baseada em RPG e matemática. O projeto transforma uma narrativa de sala de aula em uma apresentação digital mais visual, imersiva e acessível.",
@@ -171,7 +171,6 @@ const translations = {
         "filter-extensions": "Extensões",
         "filter-ai": "IA e automação",
         "filter-games": "Jogos",
-        "filter-education": "Educação",
         "filter-frontend": "Frontend",
 
         "proj1-title": "Employee Experience Journey",

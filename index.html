@@ -7,7 +7,7 @@
     <meta name="description" content="Portfólio de Shirlya Lima, desenvolvedora Full Stack especializada em aplicações web, automações, APIs e extensões Chrome.">
     <title>Shirlya Lima | Full Stack Developer</title>
 
-        <base href="/portfolio/">
+    <base href="/portfolio/">
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@
 
             <div class="project-filters reveal" role="group" aria-label="Filtrar projetos">
                 <button class="filter-btn active" data-filter="all" data-i18n="filter-all">Todos</button>
-                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="fullstack" data-i18n="filter-fullstack">Full Stack</button>
                 <button class="filter-btn" data-filter="extension" data-i18n="filter-extensions">Extensões</button>
                 <button class="filter-btn" data-filter="ai" data-i18n="filter-ai">IA e automação</button>
                 <button class="filter-btn" data-filter="games" data-i18n="filter-games">Jogos</button>
@@ -111,14 +111,14 @@
 
             <div class="projetos-grid">
                 <!-- Projeto 1 -->
-                <article class="projeto-card reveal featured-project" data-project-id="1" data-category="fullstack ai">
+                <article class="projeto-card reveal featured-project" data-project-id="1" data-category="fullstack">
                     <div class="project-image-wrapper">
                         <img src="imgs/1.png" alt="Projeto interno de Employee Experience" loading="lazy">
                         <span class="project-badge" data-i18n="project-featured">Projeto Interno</span>
                     </div>
                     <div class="card-info">
                         <p class="project-type">Full Stack · Internal Project</p>
-                        <h3>Employee Experience Journey</h3>
+                        <h3 data-i18n="proj1-title">Employee Experience Journey</h3>
                         <p data-i18n="proj1-desc">
                             Plataforma gamificada de Employee Experience desenvolvida para uso interno, com foco em autenticação, dashboards, campanhas, trilhas de aprendizagem, relatórios e automações.
                         </p>
@@ -220,7 +220,7 @@
                 </article>
 
                 <!-- Projeto 6: Portfólio Murilo Montino -->
-                <article class="projeto-card reveal" data-project-id="6" data-category="fullstack">
+                <article class="projeto-card reveal" data-project-id="6" data-category="frontend">
                     <div class="project-image-wrapper">
                         <img src="imgs/PortfolioMurilo.png" alt="Interface do Portfólio de Murilo Montino" loading="lazy">
                     </div>
@@ -307,8 +307,6 @@
                 <span data-i18n="games-button">Página de jogos</span>
             </a>
             </div>
-              
-</div>
         </section>
 
         <section class="section tecnologias" id="tecnologias">
@@ -333,7 +331,7 @@
                 <div class="tech-item"><i class="fas fa-brain"></i><span>AI Integration</span></div>
             </div>
 
-       <div class="tech-grid reveal" style="margin-bottom: 6rem;"></div>
+            <div class="tech-grid reveal" style="margin-bottom: 6rem;"></div>
             <div class="section-heading reveal">
                 <p class="eyebrow" data-i18n="specialties-eyebrow">O que eu desenvolvo</p>
                 <h2 data-i18n="specialties-title">Soluções que unem produto, código e experiência</h2>

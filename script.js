@@ -6,7 +6,8 @@ const projectData = [
     {
         id: "1",
         type: "Full Stack · Employee Experience",
-        title: "Employee Experience Journey",
+        title_pt: "Employee Experience Journey",
+        title_en: "Employee Experience Journey",
         description_pt: "Projeto interno desenvolvido para uma plataforma gamificada de Employee Experience. Atuei no desenvolvimento Full Stack implementando funcionalidades como autenticação JWT e Google OAuth, dashboards, APIs REST, controle de permissões, geração de certificados e relatórios em PDF e Excel. Algumas informações, imagens e funcionalidades foram omitidas por questões de confidencialidade.",
         description_en: "Internal Employee Experience platform developed as a corporate project. I worked as a Full Stack Developer implementing JWT and Google OAuth authentication, dashboards, REST APIs, role-based access, certificate generation, and PDF/Excel reports. Some information, screenshots, and features have been omitted due to confidentiality.",
         stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "JWT", "OAuth", "PDF", "Excel"],
@@ -109,7 +110,8 @@ const projectData = [
     {
         id: "9",
         type: "2D Game · JavaScript",
-        title: "Athena",
+        title_pt: "Athena",
+        title_en: "Athena",
         description_pt: "Endless runner inspirado na mitologia grega. Desenvolvi a movimentação, colisões, física, animações, loop de renderização, narrativa e direção visual, combinando programação e criação artística em uma experiência autoral.",
         description_en: "An endless runner inspired by Greek mythology. I developed movement, collision, physics, animations, the rendering loop, narrative, and visual direction, combining programming and art in an original experience.",
         stack: ["JavaScript", "Canvas", "HTML", "CSS", "Game Design"],
@@ -165,11 +167,14 @@ const translations = {
         "project-featured": "Destaque",
         "project-details": "Ver detalhes",
         "filter-all": "Todos",
+        "filter-fullstack": "Full Stack",
         "filter-extensions": "Extensões",
         "filter-ai": "IA e automação",
         "filter-games": "Jogos",
         "filter-education": "Educação",
+        "filter-frontend": "Frontend",
 
+        "proj1-title": "Employee Experience Journey",
         "proj1-desc": "Plataforma gamificada com autenticação, dashboards, campanhas, cursos, recompensas e relatórios.",
         "proj2-title": "Assistente de Hunting",
         "proj2-desc": "Aplicativo desktop que pré-filtra candidatos de site X usando IA semântica local e os integra à plataforma Y.",
@@ -185,6 +190,7 @@ const translations = {
         "proj7-desc": "Plataforma web criada para disponibilizar materiais e conteúdos pedagógicos para estudantes de inglês.",
         "proj8-title": "RPG Educacional",
         "proj8-desc": "Experiência web responsiva criada para apresentar uma narrativa de RPG em sala de aula.",
+        "proj9-title": "Athena",
         "proj9-desc": "Endless runner inspirado na mitologia grega, com lógica, física, colisões e arte autoral.",
 
         "extensions-eyebrow": "Catálogo",
@@ -255,11 +261,14 @@ const translations = {
         "project-featured": "Featured",
         "project-details": "View details",
         "filter-all": "All",
+        "filter-fullstack": "Full Stack",
         "filter-extensions": "Extensions",
-        "filter-ai": "AI and automation",
+        "filter-ai": "AI & automation",
         "filter-games": "Games",
         "filter-education": "Education",
+        "filter-frontend": "Frontend",
 
+        "proj1-title": "Employee Experience Journey",
         "proj1-desc": "A gamified platform featuring authentication, dashboards, campaigns, courses, rewards, and reports.",
         "proj2-title": "Hunting Assistant",
         "proj2-desc": "Desktop app that pre-filters candidates using local semantic AI and integrates them into the platform.",
@@ -275,12 +284,13 @@ const translations = {
         "proj7-desc": "Web platform created to share learning materials and resources for English students.",
         "proj8-title": "Educational RPG",
         "proj8-desc": "A responsive web experience created to present an RPG narrative in the classroom.",
+        "proj9-title": "Athena",
         "proj9-desc": "A Greek mythology-inspired endless runner featuring logic, physics, collision, and original art.",
 
         "extensions-eyebrow": "Catalog",
         "extensions-title": "Explore all my games",
         "extensions-description": "A collection of my game development projects.",
-        "extensions-button": "Open catalog",
+        "games-button": "Games page",
 
         "tech-eyebrow": "Stack",
         "tech-title": "Technologies and tools",
@@ -488,7 +498,7 @@ filterButtons.forEach(button => {
         const filter = button.dataset.filter;
 
         projectCards.forEach(card => {
-            const categories = card.dataset.category.split(" ");
+            const categories = card.dataset.category ? card.dataset.category.split(" ") : [];
             const shouldShow = filter === "all" || categories.includes(filter);
             card.classList.toggle("hidden", !shouldShow);
         });
@@ -506,7 +516,10 @@ const modalDetails = document.getElementById("modal-details");
 const closeModalButton = document.querySelector(".close-btn");
 
 function getProjectTitle(project, lang) {
-    return project.title || (lang === "pt" ? project.title_pt : project.title_en);
+    if (lang === "pt") {
+        return project.title_pt || project.title;
+    }
+    return project.title_en || project.title;
 }
 
 function openProjectModal(projectId) {

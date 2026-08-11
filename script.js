@@ -20,9 +20,9 @@ const projectData = [
         type: "Desktop App · AI & Automation",
         title_pt: "Assistente de Hunting",
         title_en: "Hunting Assistant",
-        description_pt: "Aplicativo desktop em Electron e Playwright desenvolvido para automatizar a triagem de candidatos no LinkedIn Recruiter Lite. Utiliza um modelo de IA local (ONNX Runtime) para comparar a descrição da vaga com o perfil dos candidatos por similaridade semântica sem enviar dados para a nuvem. Os perfis aprovados e qualificados são salvos e etiquetados automaticamente na ATS InHire, além de gerar relatórios completos em formato de texto.",
-        description_en: "Electron and Playwright desktop application developed to automate candidate screening in LinkedIn Recruiter Lite. It uses a local AI model (ONNX Runtime) to calculate semantic similarity between job descriptions and candidate profiles without sending data to the cloud. Approved profiles are automatically tagged and sent to the InHire ATS, generating detailed text reports.",
-        stack: ["Electron", "Node.js", "TypeScript", "Playwright", "ONNX / Local AI", "InHire API"],
+        description_pt: "Aplicativo desktop em Electron e Playwright desenvolvido para automatizar a triagem de candidatos. Utiliza um modelo de IA local (ONNX Runtime) para comparar a descrição da vaga com o perfil dos candidatos por similaridade semântica sem enviar dados para a nuvem. Os perfis aprovados e qualificados são salvos e etiquetados automaticamente na ATS, além de gerar relatórios completos em formato de texto.",
+        description_en: "Electron and Playwright desktop application developed to automate candidate screening. It uses a local AI model (ONNX Runtime) to calculate semantic similarity between job descriptions and candidate profiles without sending data to the cloud. Approved profiles are automatically tagged and sent to the ATS, generating detailed text reports.",
+        stack: ["Electron", "Node.js", "TypeScript", "Playwright", "ONNX / Local AI", "ATS API"],
         image: "imgs/AssistenteHunting.png",
         demoLink: "",
         repositoryLink: "",
@@ -77,7 +77,7 @@ const projectData = [
         stack: ["HTML", "CSS", "JavaScript", "Responsive Design"],
         image: "imgs/PortfolioMurilo.png",
         demoLink: "https://murilomontino.github.io/",
-        repositoryLink: "https://github.com/murilomontino/murilomontino.github.io",
+        repositoryLink: "",
         private: false
     },
     {
@@ -172,7 +172,7 @@ const translations = {
 
         "proj1-desc": "Plataforma gamificada com autenticação, dashboards, campanhas, cursos, recompensas e relatórios.",
         "proj2-title": "Assistente de Hunting",
-        "proj2-desc": "Aplicativo desktop que pré-filtra candidatos do LinkedIn usando IA semântica local e os integra à InHire.",
+        "proj2-desc": "Aplicativo desktop que pré-filtra candidatos de site X usando IA semântica local e os integra à plataforma Y.",
         "proj3-title": "Hunting Tracker",
         "proj3-desc": "Extensão que mensura e organiza o tempo investido em atividades de Direct Sourcing.",
         "proj4-title": "Destacador de Palavras-chave",
@@ -262,7 +262,7 @@ const translations = {
 
         "proj1-desc": "A gamified platform featuring authentication, dashboards, campaigns, courses, rewards, and reports.",
         "proj2-title": "Hunting Assistant",
-        "proj2-desc": "Desktop app that pre-filters LinkedIn candidates using local semantic AI and integrates them into InHire.",
+        "proj2-desc": "Desktop app that pre-filters candidates using local semantic AI and integrates them into the platform.",
         "proj3-title": "Hunting Tracker",
         "proj3-desc": "An extension that measures and organizes the time invested in Direct Sourcing activities.",
         "proj4-title": "Keyword Highlighter",
